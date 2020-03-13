@@ -1,0 +1,39 @@
+//Given an sorted array A of size N. Find number of elements which are less than or equal to given element X.
+
+#include <iostream>
+using namespace std;
+void numberOfSmallerElements(int a[],int n,int x);
+
+int main() {
+
+	int t,n, a[100000],x;
+	cin>>t;
+	while(t--)
+	{   
+	    cin>>n;
+	    for(int i=0;i<n;i++)
+	    {
+	        cin>>a[i];
+	        
+	    }
+	 cin>>x;
+	     numberOfSmallerElements(a,n,x);
+	     cout<<endl;
+	}
+	
+	return 0;
+}
+
+void numberOfSmallerElements(int a[],int n,int x)
+{   int count=0;
+    for(int i=0;i<n;i++)
+    { 
+        if(a[i]<=x)
+        {
+            count++;
+        }
+    
+    }
+
+    cout<<count;
+}
