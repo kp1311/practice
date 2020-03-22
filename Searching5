@@ -1,0 +1,34 @@
+//Floor in the sorted array
+
+#include <iostream>
+using namespace std;
+int floorOfNumber(long long a[],long long n,long long key);
+int main() {
+	long long n,t,key,a[1000000];
+	cin>>t>>n>>key;
+	
+	while(t--){
+	for(long long i=0;i<n;i++)
+	{
+	    cin>>a[i];
+	}
+	 cout<<	floorOfNumber(a,n,key)<<endl;   
+	}
+
+
+	return 0;
+}
+
+int floorOfNumber(long long a[],long long n,long long key)
+{
+    
+    for(int i=n-1;i>=0;i--)
+    {
+        if(a[i]<=key)
+        {
+            return a[i];
+        }
+    }
+    
+    return -1;
+}
